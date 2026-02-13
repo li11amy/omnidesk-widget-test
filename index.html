@@ -4,17 +4,5 @@
 </script>
 <!-- End of Omnidesk Widget script {/literal}-->
 <script>
-(function () {
-  function openWhenApiReady(tries) {
-    // tries — чтобы не крутиться бесконечно
-    if (window.OmniWidgetApi && typeof OmniWidgetApi.call === 'function') {
-      OmniWidgetApi.call('open')        // раскрыть список каналов (как на твоём скрине)
-      // OmniWidgetApi.call('open_widget') // если нужна форма email
-      return
-    }
-    if (tries > 100) return // ~10 секунд
-    setTimeout(function(){ openWhenApiReady(tries + 1) }, 100)
-  }
-  openWhenApiReady(0)
-})()
+      OmniWidgetApi.call('open.16095')
 </script>
