@@ -5,14 +5,8 @@
 <!-- End of Omnidesk Widget script {/literal}-->
 <script>
 (function () {
-  function run(tries) {
-    if (window.OmniWidgetApi && typeof OmniWidgetApi.call === 'function') {
       OmniWidgetApi.call('open.16095')
       return
     }
-    if (tries > 100) return
-    setTimeout(function(){ run(tries + 1) }, 100)
-  }
-  run(0)
-})()
+}
 </script>
