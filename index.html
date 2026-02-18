@@ -12,8 +12,21 @@
 	(document,[]);
 </script>
 <script>
-omni[0].email_widget.ready(function () {
-  OmniWidgetApi.call('hide_btn'); 
-});
+(function () {
+  function hide() {
+    if (window.OmniWidgetApi) {
+      OmniWidgetApi.call('hide_btn'); 
+      return true;
+    }
+    return false;
+  }
+
+  if (hide()) return;
+
+  omni[0].email_widget.ready(function () {
+    OmniWidgetApi.call('hide_btn');
+  });
+})();
 </script>
+
 
