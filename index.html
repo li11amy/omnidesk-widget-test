@@ -12,21 +12,8 @@
 	(document,[]);
 </script>
 <script>
-(function () {
-  function hide() {
-    if (window.OmniWidgetApi) {
-      OmniWidgetApi.call('hide_btn'); 
-      return true;
-    }
-    return false;
-  }
-
-  if (hide()) return;
-
-  omni[0].email_widget.ready(function () {
-    OmniWidgetApi.call('hide_btn');
-  });
-})();
+omni[0].config({
+				display_button: false
 </script>
 
 
